@@ -27,7 +27,7 @@ class SnapshotsController < ApplicationController
       end
     
       def correct_user
-        @snaphot = current_user.snapshots.find_by(id: params[:id])
+        @snapshot = current_user.snapshots.find_by(id: params[:id])
         redirect_to root_url if @snapshot.nil?
       end
 end

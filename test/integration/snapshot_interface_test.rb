@@ -30,7 +30,7 @@ class SnapshotInterfaceTest < ActionDispatch::IntegrationTest
     delete snapshot_path(first_snapshot)
     end
     # Visit different user (no delete links)
-    get user_path(users(:tony))
+    get user_path(users(:jane))
     assert_select 'a', text: 'delete', count: 0
   end
     
